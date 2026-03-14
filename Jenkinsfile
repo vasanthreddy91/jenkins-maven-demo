@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -6,13 +5,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Run Server') {
             steps {
-                sh 'java -jar target/jenkins-maven-demo-1.0.jar'
+                bat 'java -jar target\\jenkins-maven-demo-1.0.jar'
             }
         }
 
